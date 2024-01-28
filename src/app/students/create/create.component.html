@@ -1,0 +1,22 @@
+<div class="form-wrapper">
+    <form [formGroup]="createForm" (ngSubmit)="onSubmit()">
+        <div formGroupName="personalInfo">
+            <div class="form-group form-group-inline">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" formControlName="firstName">
+            </div>
+            <div class="form-group form-group-inline">
+                <label for="mname">Middle Name</label>
+                <input type="text" id="mname" formControlName="middleName">
+            </div>
+            <div class="form-group form-group-inline">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" formControlName="lastName">
+            </div>
+            <div class="form-group form-group-inline">
+                <label for="mothername">Mother Name</label>
+                <input type="text" id="mothername" formControlName="motherName">
+            </div>
+        </div>
+    </form>
+</div>
