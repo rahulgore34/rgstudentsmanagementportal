@@ -1,21 +1,63 @@
 <div class="form-wrapper">
-    <form [formGroup]="createForm" (ngSubmit)="onSubmit()">
-        <div formGroupName="personalInfo">
-            <div class="form-group form-group-inline">
-                <label for="fname">First Name</label>
-                <input type="text" id="fname" formControlName="firstName">
+    <form [formGroup]="createForm" style="display: flex;justify-content: center;align-items: center;">
+        <div>
+<fieldset class="padding-feildset">
+    <legend>Personal Info</legend>
+    <div formGroupName="personalInfo" class="grid-class">
+        <div class="form-group form-group-inline">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" formControlName="firstName">
+        </div>
+        <div class="form-group form-group-inline">
+            <label for="mname">Middle Name</label>
+            <input type="text" id="mname" formControlName="middleName">
+        </div>
+        <div class="form-group form-group-inline">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" formControlName="lastName">
+        </div>
+        <div class="form-group form-group-inline">
+            <label for="mothername">Mother Name</label>
+            <input type="text" id="mothername" formControlName="motherName">
+        </div>
+    </div>
+</fieldset>
+<fieldset class="padding-feildset">
+    <legend>Address</legend>
+            <div formGroupName="address"  class="grid-class">
+                <div class="form-group form-group-inline">
+                    <label for="street">Street</label>
+                    <input type="text" id="street" formControlName="street">
+                </div>
+                <div class="form-group form-group-inline">
+                    <label for="city">City</label>
+                    <input type="text" id="city" formControlName="city">
+                </div>
+                <div class="form-group form-group-inline">
+                    <label for="state">State</label>
+                    <input type="text" id="state" formControlName="state">
+                </div>
+                <div class="form-group form-group-inline">
+                    <label for="pincode">Pincode</label>
+                    <input type="text" id="pincode" formControlName="pincode">
+                </div>
             </div>
-            <div class="form-group form-group-inline">
-                <label for="mname">Middle Name</label>
-                <input type="text" id="mname" formControlName="middleName">
+</fieldset>
+<fieldset class="padding-feildset">
+    <legend>Communication</legend>
+            <div formGroupName="communication"  class="grid-class">
+                <div class="form-group form-group-inline">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" formControlName="email">
+                </div>
+                <div class="form-group form-group-inline">
+                    <label for="phone">Phone</label>
+                    <input type="text" id="phone" formControlName="phone">
+                </div>
             </div>
-            <div class="form-group form-group-inline">
-                <label for="lname">Last Name</label>
-                <input type="text" id="lname" formControlName="lastName">
-            </div>
-            <div class="form-group form-group-inline">
-                <label for="mothername">Mother Name</label>
-                <input type="text" id="mothername" formControlName="motherName">
+</fieldset>
+            <div>
+                <button (ngSubmit)="onSubmit()" class="btn-submit">Submit</button>
             </div>
         </div>
     </form>
